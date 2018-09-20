@@ -29,7 +29,8 @@ const app = express();
 app.use(session({
   secret:'oswaldinho',
   resave:true,
-  saveUninitialized:true
+  saveUninitialized:true,
+  cookie : { httpOnly: true, maxAge: 2419200000 }
 }));
 
 app.use(passport.initialize());
@@ -67,6 +68,9 @@ app.use('/', index);
 
 const auth = require('./routes/auth')
 app.use('/', auth)
+
+const user = require('./routes/user')
+app.use('/profile', user)
 
 
 module.exports = app;
