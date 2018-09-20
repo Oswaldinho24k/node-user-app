@@ -11,6 +11,7 @@ router.get('/signup',(req, res, next)=>{
 router.post('/signup',(req, res, next)=>{
   User.register(req.body,req.body.password)
     .then(r=>{
+      console.log('before the mail')
       sendMail(req.body.email)
       res.redirect('/login')
     }).catch(e=>console.log(e))

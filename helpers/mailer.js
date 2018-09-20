@@ -17,4 +17,6 @@ exports.sendMail=(email)=>{
     text:'Saquen las beeers',
     html:'<h1>Es en serio, vamos a beber... o no! 🤓</h1>'
   })
+  .then(info=>console.log(info))
+  .catch(e=>console.log(e))
 }
