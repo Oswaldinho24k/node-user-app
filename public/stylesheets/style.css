@@ -5,4 +5,10 @@ body {
 a {
   color: #00B7FF; }
 
+.profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: solid 5px #000; }
+
 /*# sourceMappingURL=style.css.map */

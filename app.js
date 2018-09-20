@@ -68,5 +68,8 @@ app.use('/', index);
 const auth = require('./routes/auth')
 app.use('/', auth)
 
+const profile = require('./routes/user')
+app.use('/profile', profile)
+
 
 module.exports = app;
